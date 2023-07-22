@@ -22,7 +22,7 @@ function App() {
       <h1>Payflow</h1>
       <div>
       <div>
-        <label htmlFor="amount">Enter the amount:</label>
+        <label htmlFor="amount">Amount: </label>
         <input
           type="number"
           id="amount"
@@ -30,8 +30,20 @@ function App() {
           onChange={(e) => setAmount(e.target.value)}
         />
       </div>
+      <br></br>
       <div>
-        <label htmlFor="amount">Enter the IBAN:</label>
+        <label htmlFor="amount">Memo: </label>
+        <input
+          type="text"
+          placeholder="payflow"
+          id="memo"
+          value={memo}
+          onChange={(e) => setMemo(e.target.value)}
+        />
+      </div>
+      <br></br>
+      <div>
+        <label htmlFor="amount">IBAN: </label>
         <input
           type="text"
           id="iban"
@@ -39,8 +51,9 @@ function App() {
           onChange={(e) => setIban(e.target.value)}
         />
       </div>
+      <br></br>
       <div>
-        <label htmlFor="amount">Enter the Company Name:</label>
+        <label htmlFor="amount">Company Name: </label>
         <input
           type="text"
           id="companyName"
@@ -48,15 +61,7 @@ function App() {
           onChange={(e) => setCompanyName(e.target.value)}
         />
       </div>
-      <div>
-        <label htmlFor="amount">Enter the memo:</label>
-        <input
-          type="text"
-          id="memo"
-          value={memo}
-          onChange={(e) => setMemo(e.target.value)}
-        />
-      </div>
+      <br></br>
       <div>
         <button onClick={generateQRCode}>Generate QR Code</button>
       </div>
