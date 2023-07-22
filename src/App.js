@@ -11,7 +11,7 @@ function App() {
   const generateQRCode = () => {
     if (amount && iban && companyName) {
       // Generate the QR code data based on the amount input
-      const qrCodeData = "http://localhost:3000/pay?" + "amount=" + `${amount}` + "&iban=" + `${iban}` + "&companyName=" + `${companyName}` + "&memo=" + `${memo}`
+      const qrCodeData = "https://payflow-self.vercel.app/pay?" + "amount=" + `${amount}` + "&iban=" + `${iban}` + "&companyName=" + `${companyName}` + "&memo=" + `${memo}`
       //const qrCodeData = `Amount: ${amount}`;
       setQRCodeData(qrCodeData);
     }
